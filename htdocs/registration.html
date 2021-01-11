@@ -1,0 +1,42 @@
+<!DOCTYPE HTML> 
+<html>
+
+<head><title>Агенство</title>
+<meta charset="UTF­8">
+		<title>Title</title>
+		<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="header">
+			<i><a id="selected" href="#">Главная</a><span>/</span>
+			<a href="info.php">О нас</a><span>/</span>
+			<a href="contactinfo.php">Контакты</a><span>
+	</div>
+<div id="content">
+ <h1> Недвижимость</h1>
+ <p align="center"><img src="img/298.jpg"></p>
+	<fieldset>
+	<legend><h2>Заполните форму регистрации</h2></legend>
+	<form action='php/registration.php' method="POST">
+		Логин<input type="text" name="user_login">
+		Пароль<input type="password" name="user_password">
+		<br><br>
+		ФИО<input type="text" name="fio">
+		Дата рождения<input type="date" name="birth_date">
+		Пол<input type="hidden" name="gender" value="0" />
+		<input type="checkbox" name="gender" value="1">
+		<br><br>
+		<input type="submit" value="Зарегистрироваться" />
+		</form>
+	</fieldset>	
+ </div>
+ <div id="footer">
+        
+			О разработчиках: Белков А.И.,Тарасов И.С.,Вохминцев М.С. БИ-31 Copyright © 2020  <a href="index.html" target="_self">Недвижимость"</a>
+			<br>
+			<img src="img/images.jpg" alt="фотография">
+		</div>
+</body>
+
+</html>
