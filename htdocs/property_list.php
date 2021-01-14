@@ -36,14 +36,18 @@ header('Content-Type: text/html; charset=utf-8');
 	$min='0';
 	$max='0';
 	$query = "SELECT * FROM property WHERE deleted='0' and id_property>$scrolls and address LIKE '%$value1%' limit 25";
-	$result = executeRequest($query);
+	$stmt = $dbh->prepare($query);
+	$stmt->bindParam(1, $scrolls);
+	$stmt->bindParam(2, $value1);
+	$stmt->execute();
+	//$takeresult=$stmt->fetch();
+	//$result = executeRequest($query);
 		
-		if(mysqli_num_rows($result) > 0)
-		{
+		
 			//$result = mysql_fetch_assoc($result);
 			
 			$rows = array();
-			while ($row = mysqli_fetch_assoc($result)) 
+			while ($row = $stmt->fetch()) 
 			{ 
 				$rows[] = $row; 
 			}
@@ -71,7 +75,7 @@ header('Content-Type: text/html; charset=utf-8');
 			<form action='next.php' method='POST'>
 			<input type='submit' name='next' value='next'/>
 			</form>");
-		}
+		
 ?>
 </div>	
 

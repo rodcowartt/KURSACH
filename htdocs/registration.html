@@ -19,13 +19,13 @@
 	<fieldset>
 	<legend><h2>Заполните форму регистрации</h2></legend>
 	<form action='php/registration.php' method="POST">
-		Логин<input type="text" name="user_login">
+		Логин<input type="text" name="user_login"><br>
 		Пароль<input type="password" name="user_password">
-		<br><br>
-		ФИО<input type="text" name="fio">
+		<br>
+		ФИО<input type="text" name="fio"><br>
 		Дата рождения<input type="date" name="birth_date">
-		Пол<input type="hidden" name="gender" value="0" />
-		<input type="checkbox" name="gender" value="1">
+		<br>
+		Номер кредитной карты<input type="text" name="card_number"  />
 		<br><br>
 		<input type="submit" value="Зарегистрироваться" />
 		</form>

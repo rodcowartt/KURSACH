@@ -26,14 +26,17 @@
 	
 	if($email!="email")
 	{
-		$query = "SELECT * FROM clientage RIGHT JOIN users ON users.user_id = clientage.client_id WHERE Email='$email'";
-		$result = userexecuteRequest($query);
+		$query = "SELECT * FROM clientage RIGHT JOIN users ON users.user_id = clientage.client_id WHERE Email=?";
+		$stmt = $dbh->prepare($query);
+		$stmt->bindParam(1, $email);
+		$stmt->execute();
+		//$result = userexecuteRequest($query);
 	}
 		
-		if(mysqli_num_rows($result) > 0)
-		{
+		//if(mysqli_num_rows($result) > 0)
+		
 			$rows = array();
-			while ($row = mysqli_fetch_assoc($result)) 
+			while ($row = $stmt->fetch()) 
 			{ 
 				$rows[] = $row; 
 			}
@@ -47,7 +50,7 @@
 				
 			}
 			printf("</table>");
-		}
+		
 ?>
 
 <form action='php/deleteclient.php' method='POST'>

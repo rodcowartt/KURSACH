@@ -1,15 +1,19 @@
 <?
 include("autorization.php");
 
-$email  = mysqli_real_escape_string($_POST['email']);
+$email =filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
 
-$query = "DELETE FROM users WHERE Email='$email'";
+$query = "DELETE FROM users WHERE Email=?";
+		$stmt = $dbh->prepare($query);
+		$stmt->bindParam(1, $email);
+		$stmt->execute();
+//executeRequest($query);
 
-executeRequest($query);
-
-$query = "DELETE FROM clientage WHERE client_login='$email'";
-
-executeRequest($query);
+$query = "DELETE FROM clientage WHERE client_login=?";
+		$stmt = $dbh->prepare($query);
+		$stmt->bindParam(1, $email);
+		$stmt->execute();
+//executeRequest($query);
 
 header("Location: ../clientage.php");
 

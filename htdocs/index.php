@@ -35,12 +35,21 @@ $error = enter(); ?>
 		$admin = isAdmin();
 		$email=$_COOKIE['user_email'];
 		echo "<p>Добро пожаловать:</p>";echo $_COOKIE['name'];
-		$query="SELECT amount FROM cards where fio=(select fio from clientage where client_login='$email')";
-		$amount=executeRequest($query);
-		$result=$amount->fetch_assoc();
+		$query="SELECT amount FROM cards where fio=(select fio from clientage where client_login=?)";
+		//$amount=executeRequest($query);
+		//$result=$amount->fetch_assoc();
+		$stmt = $dbh->prepare($query);
+		$stmt->bindParam(1, $email);
+		$stmt->execute();
+		$takeresult=$stmt->fetch();
+		$result=$takeresult;
 		echo "<p></p>";
 		echo "Ваш баланс: ";
 		echo $result['amount'];
+		
+		echo "<form action='refill.php' method='POST'>
+		<input type='submit' value='Пополнить' name = 'refill' />
+		</form>";
         echo "<form action='index.php' method='POST'>
 		<input type='submit' value='Выход' name = 'log_out' />
 	     </form>";
