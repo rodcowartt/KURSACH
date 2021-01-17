@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background-color: #3CB371;
+     
+    font-family: 'Roboto', sans-serif;
+}
+
+#header {
+padding: 10px;
+    border: 1px solid #b5b7ba;
+    background-color: #2E8B57;
+width: 100%;
+margin:0 auto ;
+    height: 50px;
+    text-align: center;
+    padding-top: 18px;
+}
+
+
+#header #selected {
+    color: #ADFF2F;
+	text-shadow: black 0 0 10px;
+}
+
+#center {
+display: block;
+margin-left: auto;
+margin-right: auto
+    margin: 0 auto;
+}
+
+#header a {
+    color: #00FA9A;
+	text-shadow: black 0 0 10px;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: left;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+#header span {
+    padding: 0 38px;
+}
+
+#content  {
+padding: 10px;
+height: 100%;
+width: 88%;
+    margin: 0 auto;
+}
+
+#content h1 {
+width: 100%;
+margin:0 auto;
+    text-align: center;
+	text-shadow: black 0 0 12px;
+    color:  #00FA9A;
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#content #box_text {
+color: #00FA9A;
+text-shadow: black 0 0 5px;
+text-align: center;
+position: relative;
+    width: 100%;
+    float: left
+   
+}
+
+#content #box_text p {
+	text-shadow: black 0 0 10px;
+    color: #00FA9A;
+    font-size: 24px;
+    font-weight: 8;
+   
+   
+}
+
+#content #box_text a  {
+    color: #40678a;
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    padding-right:30px;
+}
+#content #box {
+    background-color: #ffffff;
+    width: 90%;
+    height: 58%;
+    margin: 0 auto;
+    padding-top: 37px;
+    padding-left: 38px;
+}
+
+#content #box p {
+    color: #242424;
+    font-size: 24px;
+    font-weight: 100;
+    text-align: left;
+    margin-top: 37px;
+    margin-bottom: 30px;
+}
+
+#content #box input {
+    border: 1px solid #a0a0a0;
+    background-color: #f5f5f5;
+    width: 457px;
+    height: 34px;
+    padding-left:10px;
+    font-size:20px;
+    font-weight: 100;
+    margin-bottom: 12px;
+}
+
+#content #box a {
+    display: block;
+    float: left;
+    background-color:  #8cbbd3;
+    color:  #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 30px;
+    padding:11px 51px;
+}
+
+#content #box a:hover {
+    background-color: #5ba1d3;
+}
+
+#footer {
+padding: 10px;
+ width: 100%;
+height: 100%;
+    background-color: #434445;
+    height: 26%;
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    color: #a4a4a4;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 50px;
+}
+
+#footer a {
+    color: inherit;
+}
+
+.rovno_info{
+margin-top:30px;
+margin-bottom:250px;
+}
+.rovno_index{
+margin-bottom:150px;
+}
+.rovno_error{
+margin-bottom:20px;
+}
+#spanchik{
+color: black;
+padding-right: 21px;
+font-family: Arial, sans-serif;
+text-shadow: none;
+}
